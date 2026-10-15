@@ -1,0 +1,214 @@
+<!--
+  tobyrogers.pm — deploy on GitHub Pages:
+  1. Put index.html, photo.jpg and og.png in the repo root (or /docs).
+  2. Add a file named CNAME containing one line: tobyrogers.pm
+  3. Settings → Pages → deploy from branch (main, / or /docs). Point the domain's DNS at GitHub Pages.
+  No build step. No tracking. No cookies.
+-->
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toby Rogers | Head of Product</title>
+<meta name="description" content="Toby Rogers, Head of Product at hedgehog lab. I help leadership teams make smarter product, AI and growth decisions. Writer of The Punk PM.">
+<link rel="canonical" href="https://tobyrogers.pm">
+<meta name="theme-color" content="#141112">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tobyrogers.pm">
+<meta property="og:title" content="Toby Rogers | Head of Product">
+<meta property="og:description" content="I help leadership teams make smarter product, AI and growth decisions.">
+<meta property="og:image" content="https://tobyrogers.pm/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Toby Rogers | Head of Product">
+<meta name="twitter:description" content="I help leadership teams make smarter product, AI and growth decisions.">
+<meta name="twitter:image" content="https://tobyrogers.pm/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141112'/%3E%3Crect x='5' y='5' width='22' height='22' fill='%23FF3EA5'/%3E%3Crect x='11' y='11' width='16' height='16' fill='%233BDE7C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141112; --paper:#F5F0E6; --pink:#FF3EA5; --green:#3BDE7C; --grey:#C9C2B6;
+  --display:"Alfa Slab One","Rockwell","Roboto Slab",Georgia,serif;
+  --body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --pad:clamp(1.25rem,4vw,3.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--paper);font:400 clamp(1rem,.95rem + .25vw,1.125rem)/1.6 var(--body);min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--pink);text-decoration-thickness:2px;text-underline-offset:3px;transition:color .15s,background-color .15s}
+a:hover{color:var(--green)}
+:focus-visible{outline:3px solid var(--paper);outline-offset:3px}
+.skip{position:absolute;left:var(--pad);top:-4rem;background:var(--green);color:var(--ink);padding:.6rem 1rem;font-weight:700;z-index:10}
+.skip:focus{top:.75rem;color:var(--ink)}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+
+header{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1rem var(--pad);border-bottom:1px solid #3a3436;color:var(--grey)}
+header a{color:var(--grey);text-decoration:none}
+header a:hover{color:var(--green)}
+
+main{flex:1;display:grid;gap:clamp(2.5rem,5vw,4.5rem);padding:clamp(2rem,5vw,4rem) var(--pad);align-items:center;max-width:1480px;width:100%;margin:0 auto}
+@media (min-width:960px){main{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}}
+
+/* portrait */
+.sleeve{position:relative;margin:0 clamp(1rem,3vw,2rem) 0 0;justify-self:center;width:min(100%,520px,calc(72vh * .8))}
+.sleeve::before{content:"";position:absolute;inset:8% -7% -6% 12%;background:var(--pink)}
+.photo{position:relative;aspect-ratio:4/5;transform:rotate(-2.5deg);background:#1d191a repeating-linear-gradient(135deg,#262122 0 10px,#1d191a 10px 20px);overflow:hidden;box-shadow:0 0 0 6px var(--paper)}
+.photo span{position:absolute;inset:0;display:grid;place-items:center;color:var(--grey);text-align:center;padding:1rem}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:47% 30%;background:var(--ink);filter:grayscale(1) contrast(1.45) brightness(1.05)}
+.photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle,rgba(20,17,18,.55) 28%,transparent 32%) 0 0/4px 4px;mix-blend-mode:multiply}
+.sticker{position:absolute;right:-1.5rem;top:-1.25rem;width:clamp(7rem,12vw,8.75rem);aspect-ratio:1;border-radius:50%;background:var(--green);color:var(--ink);display:grid;place-items:center;text-align:center;padding:1rem;transform:rotate(11deg);font:700 .75rem/1.15 var(--body);text-decoration:none;transition:background-color .15s,transform .15s;text-transform:uppercase;letter-spacing:.04em;box-shadow:4px 4px 0 var(--ink)}
+.sticker:hover{background:var(--pink);color:var(--ink);transform:rotate(6deg) scale(1.05)}
+.sticker b{display:block;font:400 1.5rem/1 var(--display);letter-spacing:.02em}
+
+/* copy */
+.copy{max-width:66ch}
+h1{font:400 clamp(3.4rem,2rem + 7vw,7.75rem)/.9 var(--display);text-transform:uppercase;letter-spacing:.03em;color:var(--pink);text-shadow:.06em .06em 0 var(--green);margin:0 0 clamp(1.25rem,2.5vw,2rem)}
+h1 span{display:block}
+.copy .lead{font-size:clamp(1.25rem,1rem + 1vw,1.7rem);line-height:1.3;font-weight:500;margin:0 0 1.75rem;max-width:30ch;text-wrap:balance}
+.copy section{display:grid;gap:.5rem;margin-bottom:1.75rem}
+h2{justify-self:start;margin:0;background:var(--green);color:var(--ink);padding:.15rem .5rem;font:700 .72rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.copy section:nth-of-type(2) h2{background:var(--pink)}
+.copy p{margin:0;text-wrap:pretty}
+
+/* CTA */
+.cta{display:inline-flex;flex-direction:column;gap:.35rem;margin:1rem 0 2rem;padding:1.1rem 1.5rem 1rem;background:var(--pink);color:var(--ink);text-decoration:none;box-shadow:8px 8px 0 var(--green);transition:transform .15s,box-shadow .15s,background-color .15s}
+.cta strong{font:400 clamp(1.5rem,1rem + 2vw,2.4rem)/1 var(--display);text-transform:uppercase;letter-spacing:.04em}
+.cta small{font:500 .9rem/1.3 var(--body)}
+.cta:hover{color:var(--ink);background:var(--green);box-shadow:12px 12px 0 var(--pink);transform:translate(-4px,-4px)}
+.cta:active{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--pink)}
+
+/* ticket stubs */
+.stubs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.stubs a{--n:radial-gradient(circle at 0 50%,#0000 .45rem,#000 .5rem) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,#0000 .45rem,#000 .5rem) right/51% 100% no-repeat;
+  display:flex;align-items:center;gap:.6rem;padding:.6rem 1.1rem;background:var(--paper);color:var(--ink);text-decoration:none;font:700 .75rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;-webkit-mask:var(--n);mask:var(--n)}
+.stubs a::before{content:"";align-self:stretch;width:0;border-left:2px dashed var(--ink);opacity:.45;order:2}
+.stubs a i{font-style:normal;order:3;opacity:.7}
+.stubs li:nth-child(odd) a:hover{background:var(--green);color:var(--ink)}
+.stubs li:nth-child(even) a:hover{background:var(--pink);color:var(--ink)}
+.stubs a:focus-visible{-webkit-mask:none;mask:none}
+
+/* selected work */
+.work{border-top:1px solid #3a3436;padding:clamp(3rem,6vw,5rem) var(--pad);max-width:1480px;width:100%;margin:0 auto}
+.work-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.75rem 2rem;margin-bottom:clamp(2rem,4vw,3rem)}
+.work-head h2{all:unset;font:400 clamp(2.4rem,1.5rem + 4vw,4.5rem)/.95 var(--display);text-transform:uppercase;letter-spacing:.03em;color:var(--paper);text-shadow:.06em .06em 0 var(--pink)}
+.work-head p{margin:0;color:var(--grey)}
+.tracks{display:grid;gap:clamp(2rem,4vw,3.5rem)}
+@media (min-width:900px){.tracks{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.side-b{display:grid;gap:clamp(2rem,4vw,3rem);align-content:start}
+.side-label{display:block;margin-bottom:.4rem;color:var(--grey)}
+.case{display:flex;flex-direction:column;gap:1rem;border-top:6px solid var(--green);padding-top:1.25rem}
+.side-b .case{border-color:var(--pink)}
+.case.lead-track h3{font-size:clamp(1.6rem,1.1rem + 1.6vw,2.4rem)}
+.case .no{color:var(--grey)}
+.case h3{margin:0;font:700 clamp(1.25rem,1rem + .8vw,1.6rem)/1.2 var(--body);text-wrap:balance}
+.case h3 span{display:block;font-weight:500;color:var(--grey);font-size:.8em;margin-top:.2rem}
+.case dl{margin:0;display:grid;gap:.9rem}
+.case dt{font:700 .72rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.case dd{margin:.15rem 0 0;text-wrap:pretty}
+.case dd strong{color:var(--ink);background:var(--green);padding:0 .25em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.side-b dd strong{background:var(--pink)}
+.case .more{margin-top:auto;padding-top:.5rem;font-weight:700}
+footer{background:var(--green);color:var(--ink);padding:.7rem var(--pad);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1.5rem;font-weight:700}
+
+@media (max-width:959px){.sticker{right:-.5rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.cta:hover,.cta:active{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <span class="mono">Toby Rogers</span>
+  <a class="mono" href="#work">Selected work</a>
+  <a class="mono" href="https://tobyrogers.beehiiv.com" target="_blank" rel="noopener">The Punk PM ↗</a>
+</header>
+
+<main id="main">
+  <figure class="sleeve">
+    <div class="photo">
+      <span class="mono" aria-hidden="true">photo.jpg<br>portrait, B&amp;W</span>
+      <img src="photo.jpg" alt="Toby Rogers, Head of Product at hedgehog lab" width="2576" height="1449" onerror="this.remove()">
+    </div>
+    <a class="sticker" href="mailto:punkpm@pm.me" target="_blank" rel="noopener" aria-label="Let's talk: email Toby"><span><b>Let's talk</b></span></a>
+  </figure>
+
+  <div class="copy">
+    <h1><span>Hi, I'm</span><span>Toby</span></h1>
+    <p class="lead">I help leadership teams make smarter product, AI and growth decisions.</p>
+
+    <section aria-labelledby="now">
+      <h2 id="now">Now</h2>
+      <p>Head of Product at <a href="https://www.hedgehoglab.com/" target="_blank" rel="noopener">hedgehog lab</a>, working in the gap between what a business wants and what actually gets built. I've rebuilt our product function three times, most recently for AI-native ways of working, and I help organise <a href="https://www.meetup.com/producttank-newcastle/" target="_blank" rel="noopener">ProductTank Newcastle</a>.</p>
+      <p>I'm interested in what changes when making things gets faster and cheaper: what to build, how teams work, and where the value ends up.</p>
+    </section>
+
+    <section aria-labelledby="before">
+      <h2 id="before">Before</h2>
+      <p>I used to be a music journalist, until I worked out that free CDs and guestlist passes won't pay the mortgage. The music never left, so now I write The Punk PM: product and AI stories through the lens of music.</p>
+    </section>
+
+    <a class="cta" href="https://tobyrogers.beehiiv.com" target="_blank" rel="noopener">
+      <strong>Read The Punk PM →</strong>
+      <small>The (mostly) weekly newsletter. Product and AI, through the lens of music.</small>
+    </a>
+
+    <nav aria-label="Elsewhere">
+      <ul class="stubs">
+        <li><a href="https://www.hedgehoglab.com/" target="_blank" rel="noopener">hedgehog lab<i>01</i></a></li>
+        <li><a href="https://www.meetup.com/producttank-newcastle/" target="_blank" rel="noopener">ProductTank<i>02</i></a></li>
+        <li><a href="https://linkedin.com/in/tobiasrogers" target="_blank" rel="noopener">LinkedIn<i>03</i></a></li>
+        <li><a href="https://bsky.app/profile/tobyrogers.pm" target="_blank" rel="noopener">Bluesky<i>04</i></a></li>
+      </ul>
+    </nav>
+  </div>
+</main>
+
+<section class="work" id="work" aria-labelledby="selected-work">
+  <div class="work-head">
+    <h2 id="selected-work">Selected work</h2>
+    <p class="mono">Side A · Side B</p>
+  </div>
+  <div class="tracks">
+    <article class="case lead-track">
+      <span class="mono no">Side A · A1</span>
+      <h3>The Product Producer model<span>Scaling strategic capability</span></h3>
+      <dl>
+        <div><dt>The challenge</dt><dd>Our high-value Discover proposition only worked when a senior leader could be a genuine peer to the client at board level, and there were only three of us who could do it. Demand scaled with our calendars, not the market. The obvious fix (pushing Senior PMs into delivery work) would have solved utilisation and destroyed the strategic capability we'd built.</dd></div>
+        <div><dt>The move</dt><dd>I redefined the role from <strong>Product Owner to Product Producer</strong>: a senior product person who can talk strategy with a CEO about where to place the next bet <em>and</em> sequencing with a CPO about where value actually gets created, then make things real in the room with AI tooling. Domain experts bring board-level credibility; producers bring engagement ownership, product rigour and hands-on judgement. Neither works alone; together it's hard to replicate.</dd></div>
+        <div><dt>The outcome</dt><dd><strong>80% of engagements</strong> now run on this model, and PM time has shifted from 60–80% tactical delivery to <strong>70%+ strategic work</strong>. Strategic capability now scales with a developed bench, not a calendar.</dd></div>
+      </dl>
+    </article>
+    <div class="side-b">
+    <article class="case">
+      <span class="mono no">Side B · B1</span>
+      <h3>A UK insurer<span>New proposition, validated</span></h3>
+      <dl>
+        <div><dt>The challenge</dt><dd>A UK insurer wanted to capitalise on a gap in the market, but traditional delivery cycles made the opportunity too slow and too risky to commit to.</dd></div>
+        <div><dt>The move</dt><dd>I led the strategic framing of the proposition: what to validate, in what order, and what the commercial case had to prove at each gate before build investment was committed.</dd></div>
+        <div><dt>The outcome</dt><dd>A new proposition forecast (conservatively) to generate <strong>over £2.5m in premium revenue over three years</strong>.</dd></div>
+      </dl>
+      <a class="more" href="mailto:punkpm@pm.me?subject=UK%20insurer%20case%20study">Client withheld. Details on request →</a>
+    </article>
+    <article class="case">
+      <span class="mono no">B2</span>
+      <h3>Under Armour<span>AI at the frontier</span></h3>
+      <dl>
+        <div><dt>The challenge</dt><dd>Use AI to craft a genuinely motivational team talk for athletes, blending machine generation with human emotion so it felt authentic rather than synthetic.</dd></div>
+        <div><dt>The move</dt><dd>I led one of the agency's first AI-powered engagements: evaluating models, building the prompt framework and feedback loops that let the team iterate fast, and grounding the work in sports psychology so it resonated rather than impressed.</dd></div>
+        <div><dt>The outcome</dt><dd>An award-nominated campaign that set a benchmark for AI–human collaboration, and helped open the AI market that now accounts for <strong>over 60% of the agency's revenue</strong>.</dd></div>
+      </dl>
+      <a class="more" href="https://hedgehoglab.com/our-work/ultimate-ai-team-talk/" target="_blank" rel="noopener">Public case study ↗</a>
+    </article>
+    </div>
+  </div>
+</section>
+
+<footer class="mono">
+  <span>TR-001 · Newcastle upon Tyne</span>
+  <span>© 2026 Toby Rogers</span>
+</footer>
+</body>
+</html>
